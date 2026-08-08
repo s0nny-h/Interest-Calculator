@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple interest calculator that is made using GitHub Pages and tracks no data on users.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1>
+
+    <br><br>
+    <br><br>
+    <br><br>
+    
+    <form>
+        <label>Interest Rate (%):</label><br>
+        <input type="number" id="rate">
+        <br><br>
+        <label>Balance (£):</label><br>
+        <input type="number" id="balance">
+        <br><br>
+        <label>Time (years):</label><br>
+        <input type="number" id="time">
+        <br><br>
+        <br><br>
+        <button onclick="calculateInterest()">Calculate</button>
+        <br><br>
+        <br><br>
+        <p id="result_interest" style="text-align: center;">Interest Earned: £0.00</p>
+        <p id="result_balance" style="text-align: center;">Final Balance: £0.00</p>
+    </form>
+
+    <script>
+        // Main Code to calculate compound interest
+        function calculateInterest() {
+            let true_rate = document.getElementById("rate").value / 100;
+            let true_balance = document.getElementById("balance").value;
+            let true_time = document.getElementById("time").value;
+
+            let interest_earned = true_balance * (true_rate * true_time);
+            let end_balance = +true_balance + interest_earned;
+
+            let final_interest = interest_earned.toFixed(2);
+            let final_balance = end_balance.toFixed(2);
+
+            event.preventDefault(); 
+            document.getElementById("result_interest").innerText = "Interest Earned: £" + final_interest;
+            document.getElementById("result_balance").innerText = "Final Balance: £" + final_balance;
+        }
+    </script>
+
+
+</body>
+
+<footer>
+    <p>This Site uses no cookies and stores no personal information, Site made By <a href="https://github.com/s0nny-h" target="_blank">Sonny Harrison</a></p>
+</footer>
+</html>
