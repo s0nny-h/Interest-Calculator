@@ -7,7 +7,6 @@ The Interest Calculator can be found at the site: https://s0nny-h.github.io/Inte
 
 # Current Issues
 1. The site/code is not made for Mobile devices, and works only on computers (however it may work sometimes).
-2. You cannot add money over years as a yearly deposit (only a starting value that is then used to calculate the interest).
 
 # Privacy/Other Infomation
 This Site collects no data or cookies about users or any user data entered. 
