@@ -1,3 +1,5 @@
+<!-- Compound Interest Calculator -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +17,7 @@
     <br><br>
     
     <form>
+        <!-- Main Inputs -->
         <label>Interest Rate (%):</label><br>
         <input type="number" id="rate">
         <br><br>
@@ -23,6 +26,9 @@
         <br><br>
         <label>Time (years):</label><br>
         <input type="number" id="time">
+        <br><br>
+        <label>Money deposited per year (£):</label><br>
+        <input type="number" id="money">
         <br><br>
         <br><br>
         <button onclick="calculateInterest()">Calculate</button>
@@ -38,9 +44,11 @@
             let true_rate = document.getElementById("rate").value / 100;
             let true_balance = document.getElementById("balance").value;
             let true_time = document.getElementById("time").value;
+            let true_money = document.getElementById("money").value;
 
-            let interest_earned = true_balance * (true_rate * true_time);
-            let end_balance = +true_balance + interest_earned;
+            //let interest_earned = true_balance * (true_rate * true_time);
+            let interest_earned = (true_balance * true_rate * true_time) + (true_money * true_rate * ((true_time * (true_time - 1)) / 2));
+            let end_balance = +true_balance + interest_earned + (true_money * true_time);
 
             let final_interest = interest_earned.toFixed(2);
             let final_balance = end_balance.toFixed(2);
