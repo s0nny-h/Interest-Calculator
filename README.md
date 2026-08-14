@@ -5,9 +5,6 @@ It operates in Either Compound Interest Mode or Simple Interest Mode that can be
 
 The Interest Calculator can be found at the site: https://s0nny-h.github.io/Interest-Calculator/
 
-# Current Issues
-1. The site/code is not made for Mobile devices, and works only on computers (however it may work sometimes).
-
 # Privacy/Other Infomation
 This Site collects no data or cookies about users or any user data entered. 
 
